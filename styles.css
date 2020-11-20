@@ -1,0 +1,54 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header .container{
+	height: 50px;
+	display: flex;
+	align-items: center;
+	background: gray;
+}
+
+.container h1 {
+	padding-left: 20px;
+}
+
+main {
+	height: calc(100% - 90px);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.search {
+	padding: 20px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: coral;
+}
+
+.search form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form label {
+	padding-bottom: 5px;
+}
+
+footer {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: grey;
+}
