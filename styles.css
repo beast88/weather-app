@@ -1,6 +1,9 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
-	box-sizing: border-box;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -11,11 +14,14 @@ header .container{
 	height: 50px;
 	display: flex;
 	align-items: center;
-	background: gray;
+	background: #273746;
 }
 
 .container h1 {
 	padding-left: 20px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #FFF;
 }
 
 main {
@@ -32,7 +38,7 @@ main {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	background: coral;
+	background: #AED6f1;
 }
 
 .search form {
@@ -41,8 +47,12 @@ main {
 	align-items: center;
 }
 
-form label {
-	padding-bottom: 5px;
+.search input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 1.2rem;
+	font-family: inherit;
 }
 
 footer {
@@ -50,5 +60,12 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: grey;
+	background: #273746;
+	color: #FFF;
+	font-size: 0.75rem;
+}
+
+footer a {
+	color: #D5D8DC;
+	text-decoration: none;
 }
