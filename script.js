@@ -33,6 +33,10 @@ const renderCard = (place, weather, temp) => {
 	container.append(card);
 };
 
+const clearElement = () => {
+	container.innerHTML = ''
+}
+
 const getWeather = (loc) => {
 	fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=1defcd4c96f2a8a98157d00156e7fe7e`)
 		.then(response => response.json())
@@ -43,7 +47,7 @@ const getWeather = (loc) => {
 			let temp = Math.floor(data.main.temp - 273.15); //celcius
 
 			console.log(place, weather, temp);
-			//Function to remove weather card before the new one is rendered as they stack on one and other
+			clearElement();
 
 			renderCard(place, weather, temp);
 		})
