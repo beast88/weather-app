@@ -3,11 +3,33 @@ const search = document.getElementById('search');
 const container = document.querySelector('.card-container');
 
 //render the weather card
-const renderCard = () => {
+const renderCard = (place, weather, temp) => {
 	const card = document.createElement('div');
 	card.setAttribute('class', 'card');
 
-	
+	const bg = document.createElement('div');
+	bg.setAttribute('class', 'bg-div');
+	//Need a way to set the image depending on the weather
+	//Need to change the style of the bg image in js
+
+	const info = document.createElement('div');
+	info.setAttribute('class', 'info');
+
+	const name = document.createElement('h2');
+	name.setAttribute('class', 'name');
+	name.innerText = place;
+
+	const atmo = document.createElement('h3');
+	atmo.setAttribute('class', 'atmo');
+	atmo.innerText = weather;
+
+	const heat = document.createElement('h1');
+	heat.setAttribute('class', 'heat');
+	heat.innerText = temp
+
+	info.append(name, atmo, heat);
+
+	card.append(bg, info);
 
 	container.append(card);
 };
@@ -22,9 +44,8 @@ const getWeather = (loc) => {
 			let temp = Math.floor(data.main.temp - 273.15); //celcius
 
 			console.log(place, weather, temp);
-			//Need to extract the wanted info and pass it to the relevant functions to create and
-			//display elements
-			renderCard();
+			
+			renderCard(place, weather, temp);
 		})
 };
 

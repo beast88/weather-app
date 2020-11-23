@@ -77,6 +77,13 @@ main {
 	-moz-box-shadow: 5px 10px 13px 3px rgba(0,0,0,0.75);
 }
 
+.card .bg-div {
+	height: 50%;
+	border: 1px solid black;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px; 
+}
+
 footer {
 	height: 40px;
 	display: flex;
