@@ -2,6 +2,16 @@ const form = document.getElementById('form');
 const search = document.getElementById('search');
 const container = document.querySelector('.card-container');
 
+//render the weather card
+const renderCard = () => {
+	const card = document.createElement('div');
+	card.setAttribute('class', 'card');
+
+	
+
+	container.append(card);
+};
+
 const getWeather = (loc) => {
 	fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=1defcd4c96f2a8a98157d00156e7fe7e`)
 		.then(response => response.json())
@@ -14,6 +24,7 @@ const getWeather = (loc) => {
 			console.log(place, weather, temp);
 			//Need to extract the wanted info and pass it to the relevant functions to create and
 			//display elements
+			renderCard();
 		})
 };
 
