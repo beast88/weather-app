@@ -2,7 +2,6 @@ const form = document.getElementById('form');
 const search = document.getElementById('search');
 const container = document.querySelector('.card-container');
 
-//render the weather card
 const renderCard = (place, weather, temp) => {
 	const card = document.createElement('div');
 	card.setAttribute('class', 'card');
@@ -25,9 +24,9 @@ const renderCard = (place, weather, temp) => {
 
 	const heat = document.createElement('h1');
 	heat.setAttribute('class', 'heat');
-	heat.innerText = temp
+	heat.innerText = `${temp}\xB0C`
 
-	info.append(name, atmo, heat);
+	info.append(name, heat, atmo);
 
 	card.append(bg, info);
 
@@ -44,7 +43,8 @@ const getWeather = (loc) => {
 			let temp = Math.floor(data.main.temp - 273.15); //celcius
 
 			console.log(place, weather, temp);
-			
+			//Function to remove weather card before the new one is rendered as they stack on one and other
+
 			renderCard(place, weather, temp);
 		})
 };

@@ -84,6 +84,28 @@ main {
 	border-top-left-radius: 10px; 
 }
 
+.card .info {
+	height: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	color: #273746;
+}
+
+.info .name {
+	font-size: 1.5rem;
+}
+
+.info .heat {
+	grid-row-start: span 2;
+	font-size: 2rem;
+}
+
+.info .atmo {
+	font-size: 1.3rem;
+}
+
 footer {
 	height: 40px;
 	display: flex;
