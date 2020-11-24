@@ -79,9 +79,10 @@ main {
 
 .card .bg-div {
 	height: 50%;
-	border: 1px solid black;
 	border-top-right-radius: 10px;
-	border-top-left-radius: 10px; 
+	border-top-left-radius: 10px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .card .info {
