@@ -1,6 +1,15 @@
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const container = document.querySelector('.card-container');
+const img = {
+	clear: 'Images/clear.jpg',
+	clouds: 'Images/clouds.jpg',
+	drizzle: 'Images/drizzle.jpg',
+	fog: 'Images/fog.jpg',
+	rain: 'Images/rain.jpg',
+	snow: 'Images/snow.jpg',
+	thunder: 'Images/thunder.jpg'
+}
 
 const renderCard = (place, weather, temp) => {
 	const card = document.createElement('div');
