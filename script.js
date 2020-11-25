@@ -67,16 +67,19 @@ const getWeather = (loc) => {
 	fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=1defcd4c96f2a8a98157d00156e7fe7e`)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
+			search.classList.remove('error');
+			search.blur();
 			let place = data.name;
 			let weather = data.weather[0].main;
 			let temp = Math.floor(data.main.temp - 273.15); //celcius
 			let id = data.weather[0].id;
 
-			console.log(place, weather, temp, id);
 			clearElement();
-
 			renderCard(place, weather, temp, id);
+		})
+		.catch(error => {
+			search.classList.add('error');
+			search.blur();
 		})
 };
 
