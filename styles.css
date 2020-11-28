@@ -1,3 +1,7 @@
+:root {
+	--bezier: cubic-bezier(.3, -0.01, .5, 1);
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -80,6 +84,24 @@ main {
 	box-shadow: 5px 10px 13px 3px rgba(0,0,0,0.75);
 	-webkit-box-shadow: 5px 10px 13px 3px rgba(0,0,0,0.75);
 	-moz-box-shadow: 5px 10px 13px 3px rgba(0,0,0,0.75);
+
+	animation: fadeIn var(--bezier) 650ms;
+}
+
+@keyframes fadeIn {
+	0% { 
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	75% {
+		opacity: 0.5;
+	}
+
+	100% {
+		 opacity: 1;
+		 transform: translateY(0%);
+	}
 }
 
 .card .bg-div {

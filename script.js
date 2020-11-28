@@ -68,7 +68,6 @@ const getWeather = (loc) => {
 		.then(response => response.json())
 		.then(data => {
 			search.classList.remove('error');
-			search.blur();
 			let place = data.name;
 			let weather = data.weather[0].main;
 			let temp = Math.floor(data.main.temp - 273.15); //celcius
@@ -79,7 +78,6 @@ const getWeather = (loc) => {
 		})
 		.catch(error => {
 			search.classList.add('error');
-			search.blur();
 		})
 };
 
@@ -89,4 +87,5 @@ form.addEventListener('submit', (e) => {
 	getWeather(loc);
 
 	search.value = '';
+	search.blur();
 });
