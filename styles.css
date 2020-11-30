@@ -17,6 +17,7 @@ body {
 header .container{
 	height: 50px;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	background: #273746;
 }
@@ -26,6 +27,12 @@ header .container{
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: #FFF;
+}
+
+.container a {
+	padding-right: 20px;
+	color: #FFF;
+	font-size: 2rem;
 }
 
 main {
