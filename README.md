@@ -1,12 +1,33 @@
 # Weather App
 
-A simple weather webapp built using Javascript. Designed to be include as part of a portfolio.
+## Project Overview
 
-This was built using the OpenWeather API: https://openweathermap.org/current
+### Description
 
-The API key is provided as part of this project.
+A simple weather webapp built using Javascript.
 
-*How to Use*
+### How to Use
 
-Simple enter the name of a town/city to see the current weather there.
+Simply enter the name of a town or city to see the current weather.
 
+## Development
+
+### Technologies
+
+- Built with Javascript
+- OpenWeather API: https://openweathermap.org/current
+- CSS animations
+- Responsive design
+
+### Applied Skills
+
+- Calling and utilizing a third party API
+- DOM manipulation
+
+### License
+
+The API key for OpenWeather is provided as part of this project.
+
+### Notes
+
+Although this is a simple app, it shows a lot of room for scope. More datasets could be utilized from the API and included in the displayed information.
